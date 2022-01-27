@@ -1,0 +1,31 @@
+ALGORITHM  sumOverlappingElements 
+
+  VAR 
+       i, n : INTEGER;
+       sum  : INTEGER :=0;
+       tab1,tab2 : HASH_TABLE<INTEGER,INTEGER>;
+
+    BEGIN
+        FOR i from 1 to n STEP 1 DO
+         Read(tab1);
+         Read(tab2);
+        END_FOR 
+
+        FOR i FROM 0 TO tab1.length-1 STEP 1 DO
+
+            IF (set2.lookup(tab1[i]) = TRUE)
+                sum := sum +tab1[i] ;
+            END_IF
+        END_FOR
+
+
+        FOR i FROM 0 TO tab2.length-1 STEP 1 DO
+             IF (tab1.lookup(tab2[i]) = TRUE)
+                sum := sum +tab2[i] ;
+            END_IF
+        END_FOR
+ 
+
+   Write("Sum is:",Sum);
+
+ END
